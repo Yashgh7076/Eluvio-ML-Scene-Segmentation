@@ -51,4 +51,4 @@ CHALLENGES FACED:
 
 2) Due to the process being resource exhaustive, other data engineering approaches or feature transformations cannot be flexibly carried out.
 
-![alt text](https://github.com/[Yashgh7076]/[Eluvio-ML-Scene-Segmentation]/blob/[images]/Fold.png?raw=true)
+![Model training: fold 2](https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png)
