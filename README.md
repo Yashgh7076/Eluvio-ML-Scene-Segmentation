@@ -50,11 +50,11 @@ Training the model:
 The model was trained using a focal loss with alpha = 9 and gamma = 2.5. These values were used after observing that the complete Movie Scenes Dataset has a 9:1 ratio of negative to positive examples and the same value for gamma was reported in https://arxiv.org/abs/1708.02002 
 
 <p align = "left">
-  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold.png style="width:200px; height:100px"/>
+  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold.png style="width:100px; height:75px"/>
 </p>
 
 <p align = "right">
-  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png style="width:200px; height:100px"/>
+  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png style="width:100px; height:75px"/>
 </p>
 
 CHALLENGES FACED:
