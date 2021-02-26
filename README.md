@@ -26,6 +26,8 @@ On observing the data it is seen that there are close to 8000 true scene boundar
 
 Update #3: Date 25th Feb 2021
 
+Obtained metrics Mean Average Precision (mAP) = 0.081, Mean Maximum IoU (miou) = 0.044
+
 The idea was to use a window of shots to generate feature embeddings for the boundary after the central shot. So for examples shots 1 through 7 (assuming 0 index is first) would be used to learn embeddings to represent the boundary after shot 4. 
 
 The main aspects of this approach are:
