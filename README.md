@@ -49,16 +49,13 @@ The main aspects of this approach are:
 Training the model:
 The model was trained using a focal loss with alpha = 9 and gamma = 2.5. These values were used after observing that the complete Movie Scenes Dataset has a 9:1 ratio of negative to positive examples and the same value for gamma was reported in https://arxiv.org/abs/1708.02002 
 
-<p align = "center">
-  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold.png />
+<p align = "left">
+  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold.png style="width:200px; height:100px"/>
 </p>
 
-<p align = "center">
-  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png />
+<p align = "right">
+  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png style="width:200px; height:100px"/>
 </p>
-
-![Model training: fold 1](https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold.png) ![Model training: fold 2](https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png)
-
 
 CHALLENGES FACED:
 1) The major limitation of this approach is the use of exhaustive hardware. A laptop having 16 GB of RAM can process a dataset when windows = 5, but typically encounters a MemoryError when a larger window size is chosen. This was remedied by breaking the data down into 5 parts manually and extracting features. The link to the created datasets is provided here: https://drive.google.com/drive/folders/10U2EFCuH1fP5Wc0cf7Abn9c29ppJavEx?usp=sharing
