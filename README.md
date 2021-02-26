@@ -54,7 +54,7 @@ The model was trained using a focal loss with alpha = 9 and gamma = 2.5. These v
 </p>
 
 <p align = "right">
-  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png style="width:50px; height:25px"/>
+  <img src = https://github.com/Yashgh7076/Eluvio-ML-Scene-Segmentation/blob/main/images/Fold_2.png width = "400" height = "300"/>
 </p>
 
 CHALLENGES FACED:
