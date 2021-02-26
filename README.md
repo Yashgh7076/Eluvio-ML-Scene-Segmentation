@@ -50,3 +50,5 @@ CHALLENGES FACED:
 1) The major limitation of this approach is the use of exhaustive hardware. A laptop having 16 GB of RAM can process a dataset when windows = 5, but typically encounters a MemoryError when a larger window size is chosen. This was remedied by breaking the data down into 5 parts manually and extracting features. The link to the created datasets is provided here: https://drive.google.com/drive/folders/10U2EFCuH1fP5Wc0cf7Abn9c29ppJavEx?usp=sharing
 
 2) Due to the process being resource exhaustive, other data engineering approaches or feature transformations cannot be flexibly carried out.
+
+![alt text](https://github.com/[Yashgh7076]/[Eluvio-ML-Scene-Segmentation]/blob/[images]/Fold.png?raw=true)
