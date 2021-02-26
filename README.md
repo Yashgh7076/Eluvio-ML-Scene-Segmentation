@@ -23,3 +23,24 @@ Description for each neural network model attempted
 
 Motivation for using Focal Loss as defined in https://arxiv.org/abs/1708.02002 and https://pypi.org/project/focal-loss/:
 On observing the data it is seen that there are close to 8000 true scene boundaries and close to 97000 ordinary shot boundaries. This is an example of an imbalanced data set for a one-shot detector that was being developed. Focal loss has been demonstrated to help in such situations and the code is conveniently developed in a Python package.
+
+Update #3: Date 25th Feb 2021
+
+The idea was to use a window of shots to generate feature embeddings for the boundary after the central shot. So for examples shots 1 through 7 (assuming 0 index is first) would be used to learn embeddings to represent the boundary after shot 4. 
+
+The main aspects of this approach are:
+
+1) Since this is a sliding window approach the ends of each movie were padded with shots having 0 (zero padding). The number of shots was flexibly varied and is calculated as int((window-1)/2). It is important to note that the size of the window needs to be an odd integer greater than 1 so that each central shot has the same number of neighbors on either side. 
+
+2) In order to have the same dimension for all features from 'place','cast','action' and 'audio', the latter three were repeated along their respective dimension and concatenated with the former. This means that each shots is represented as a feature vector of size 2048 x 4.
+
+3) After reshaping, the final input to the neural network is of size (None, window, 2048, 4) where None is the batch size and can be varied flexibly as well. This essentially treats each input as an image of size window x 2048 having 4 channels of information given by the extracted features. This idea was explored in my Thesis seen here: https://yashgh7076.github.io/projects.html
+
+4) Global Average Pooling was used to retain the average of all activation maps in the final convolutional layer. This was done primarily to keep the number of connections required to connect to the dense network down, which also helps in reducing the number of free parameters of the network.
+
+5) Due to hardware limitations the dataset was divided into two parts having roughly 60% of the total data (37 movies) and 40% of the total data (27 movies) respectively. The model was first trained on the larger dataset and tested on the smaller. The process was repeated by reversing the roles of the training and testing data sets, essentially serving as a 2-fold crossvalidation.
+
+CHALLENGES FACED:
+1) The major limitation of this approach is the use of exhaustive hardware. A laptop having 16 GB of RAM can process a dataset when windows = 5, but typically encounters a MemoryError when a larger window size is chosen. This was remedied by breaking the data down into 5 parts manually and extracting features. The link to the created datasets is provided here: https://drive.google.com/drive/folders/10U2EFCuH1fP5Wc0cf7Abn9c29ppJavEx?usp=sharing
+
+2) Due to the process being resource exhaustive, other data engineering approaches or feature transformations cannot be flexibly carried out.
