@@ -1,3 +1,7 @@
+IMPORTANT!
+Please see the folder final for the latest submissions for this challenge. Updates are posted regularly and can be found at the bottom of this README
+
+
 This is a repository to store files while I work on the Eluvio ML Scene Segmentation Challenge
 
 Update #1:
