@@ -32,7 +32,7 @@ first = int((window - 1)/2)
 model1 = tf.keras.models.load_model('drive/MyDrive/Eluvio-MLChallenge/3d_data/sigmoid_final_2.h5') # Naming mistake -> should be softmax
 model2 = tf.keras.models.load_model('drive/MyDrive/Eluvio-MLChallenge/3d_data/sigmoid_final_1.h5')
 
-for i in range(12, total_files):
+for i in range(total_files):
     
     filename = directory + '/' + files[i]
     f = open(filename, 'rb')
