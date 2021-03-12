@@ -1,0 +1,9 @@
+This is the folder containing the updated codes for the Eluvio-ML Scene Segmentation challenge.
+
+The idea was to use four separate convolutional layers to learn from the 'places', 'cast', 'action' and 'audio' features.
+
+The learned emebeddings would then be combined before the first dense layer.
+
+Sigmoid activation was used instead of softmax.
+
+This model demsontrated better learning and better results than the previous one submitted for consideration earlier.
