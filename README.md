@@ -6,10 +6,13 @@ Motivation for using Focal Loss as defined in https://arxiv.org/abs/1708.02002 a
 On observing the data it is seen that there are close to 8000 true scene boundaries and close to 97000 ordinary shot boundaries. This is an example of an imbalanced data set for a one-shot detector that was being developed. Focal loss has been demonstrated to help in such situations and the code is conveniently developed in a Python package.
 
 UPDATE: 11th March 2021 (submitted via email on 2nd March 2021)
+
 New metrics: Mean Average Precision (mAP) = 0.14, Mean Maximum IoU (miou) = 0.29
+
 Previous metrics Mean Average Precision (mAP) = 0.081, Mean Maximum IoU (miou) = 0.044
 
 Description update: 11th March 2021
+
 Instead of creating copies of the three features 'cast', 'action' and 'audio', I trained four separate convolutional layers on each of the provided features. The learned embeddings were then concatenated before being fed into the dense part of the network.
 
 L1 regularization is used in all layers for weights and biases to encourage sparsity in these parameters. Using a sigmoid function was also seen to improve both learning and the final results respectively. Other regularizations, viz. L2 and L1_L2 were tried but did not improve the learning or results by much.
