@@ -23,9 +23,9 @@ The main aspects of this approach are:
 
 3) L1 regularization is used in all layers for weights and biases to encourage sparsity in these parameters. Using a sigmoid function was also seen to improve both learning and the final results respectively. Other regularizations, viz. L2 and L1_L2 were tried but did not improve the learning or results by much.
 
-4) Global Average Pooling was used to retain the average of all activation maps in the final convolutional layer. This was done primarily to keep the number of connections required to connect to the dense network down, which also helps in reducing the number of free parameters of the network.
+4) Global Average Pooling was used to retain the average of all activation maps in each convolutional layer. This was done primarily to keep the number of connections required to connect to the dense network down, which also helps in reducing the number of free parameters of the network.
 
-5) The model was trained using 2-fold crossvalidation. In this roughly 60% of the data (37 movies) were used to train classifer1 and 40% of the data (27 images) were used to train classifier2. <u> The classifiers were interchanged when testing the model </u>. 
+5) The model was trained using 2-fold crossvalidation. In this roughly 60% of the data (37 movies) were used to train classifer1 and 40% of the data (27 images) were used to train classifier2. <b> The classifiers were interchanged when testing the model </b>. 
 
 6) The main reason for using 2-fold crossvalidation was due to hardware limitation. It was seen that the the latter part of the data set (27 images) contained more shots/movie than the earlier 37 images. Ideally I would have liked to perform a 5-fold crossvalidation in which, in iteration 1: datasets 1 through 4 would be used for training and 5 would be used for testing. The order of training and testing data sets would be changed in each iteration, thus allowing the model to predict on each fold while treating it as a test data set. However this proved to be a very memory intensive task and could not be completed even on Google Colab Pro with 27 GB of RAM.
 
