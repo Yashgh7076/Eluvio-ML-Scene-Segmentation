@@ -9,7 +9,7 @@ UPDATE: 11th March 2021 (submitted via email on 2nd March 2021)
 
 New metrics: Mean Average Precision (mAP) = 0.14, Mean Maximum IoU (miou) = 0.29
 
-Previous metrics Mean Average Precision (mAP) = 0.081, Mean Maximum IoU (miou) = 0.044
+Previous metrics: Mean Average Precision (mAP) = 0.081, Mean Maximum IoU (miou) = 0.044
 
 Description update: 11th March 2021
 
@@ -17,7 +17,7 @@ Instead of creating copies of the three features 'cast', 'action' and 'audio', I
 
 L1 regularization is used in all layers for weights and biases to encourage sparsity in these parameters. Using a sigmoid function was also seen to improve both learning and the final results respectively. Other regularizations, viz. L2 and L1_L2 were tried but did not improve the learning or results by much.
 
-The data used stays the same, so does the idea of performing 2-fold crossvalidation. In this roughly 60% of the data (37 movies) were used to train classifer1 and 40% of the data (27 images) were used to train classifier2. <b> The classifiers were interchanged when testing the model </b>. 
+The data used stays the same, so does the idea of performing 2-fold crossvalidation. In this roughly 60% of the data (37 movies) were used to train classifer1 and 40% of the data (27 images) were used to train classifier2. <u> The classifiers were interchanged when testing the model </u>. 
 
 The idea was to use a window of shots to generate feature embeddings for the boundary after the central shot. So for examples shots 1 through 7 (assuming 0 index is first) would be used to learn embeddings to represent the boundary after shot 4. 
 
